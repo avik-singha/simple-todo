@@ -6,7 +6,7 @@ import TextBox from './component/textbox';
 function App() {
   return (
     <div className="App">
-      
+      <DateTime/>
     </div>
   );
 }
