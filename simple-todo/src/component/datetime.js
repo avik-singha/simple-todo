@@ -1,4 +1,4 @@
-import React,{useEffect,useState}from "react";
+import React,{useEffect,useState} from "react";
 
 const DateTime = () => {
     var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
@@ -53,7 +53,7 @@ const DateTime = () => {
             {daysLeftInMonth} days left in this Month.
         </h2>
         <h2>
-            {monthLeftInYear} month left in this Year.
+            {monthLeftInYear} months left in this Year.
         </h2>
     </div>)
 }
