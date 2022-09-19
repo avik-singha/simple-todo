@@ -1,14 +1,14 @@
 import React,{useEffect,useState} from "react";
 
 const DateTime = () => {
-    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    var countDownDate = new Date("Sep 20, 2022 00:00:00").getTime();
     let currentDate = new Date();
     let [counter, setCounter] = useState(0);
     let [timeLeft, setTimeLeft] = useState(0);
 
     useEffect(()=>{
         getTimeLeftInADay();
-    },[counter]);
+    });
 
 
     function getDaysInMonth(year, month) {
@@ -23,14 +23,15 @@ const DateTime = () => {
             var distance = countDownDate - now;
 
             // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="demo"
-            timeLeft = days + "d " + hours + "h "
+            timeLeft = hours + "h "
                 + minutes + "m " + seconds + "s ";
+            setTimeLeft(timeLeft);
             
             // If the count down is over, write some text 
             if (distance < 0) {
